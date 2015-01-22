@@ -16,8 +16,8 @@
       tokens: {},
       outputMode: 'json',
       effect: 'show',
-      thumbnailSize: "P120x80",
-      imageAlt: null,
+      thumbnailSize: "C60x60",
+      imageAlt: "featured",
       error: function() {
         console.log("jQuery RSS: url doesn't link to RSS-Feed");
       },

@@ -3212,8 +3212,9 @@ input.gsc-search-button {
 }
 .media-thumbnail {
   padding: 2px;
-  -webkit-box-shadow: 0 0 7px #ceccb4;
-          box-shadow: 0 0 7px #ceccb4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 7px #a0a0a0;
+          box-shadow: 0 0 7px #a0a0a0;
 }
 .media-thumbnail:hover {
   -webkit-box-shadow: 0 0 7px #222;
@@ -3224,7 +3225,7 @@ input.gsc-search-button {
   list-style: none;
 }
 .media {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 .media:first-child {
   margin-top: 0;
@@ -3823,6 +3824,9 @@ video {
   }
   .font-group {
     margin: 0 15px 10px;
+  }
+  .media-thumbnail {
+    width: 60px;
   }
 }
 /* Small devices < 768px
