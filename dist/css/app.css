@@ -2594,6 +2594,7 @@ body {
 -------------------------------------------------- */
 .hentry {
   background-color: #fff;
+  border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
 .entry-header {
@@ -3290,7 +3291,7 @@ input.gsc-search-button {
   text-shadow: none;
   background: #b3d4fc;
 }
-.tab-access {
+.js-tab-access {
   outline: 0;
 }
 /* Font
@@ -3850,7 +3851,6 @@ video {
 ========================================================================== */
 .typography {
   min-height: 300px;
-  border-right: 1px solid #eee;
 }
 .typography h1,
 .typography h2,
