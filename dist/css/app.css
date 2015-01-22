@@ -2931,14 +2931,21 @@ body {
   margin-left: -1px;
   font-size: 12px;
   line-height: 1.4;
-  color: #428bca;
+  color: #222;
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #ddd;
 }
+.paging li a:hover {
+  color: #fff;
+  background-color: #00a1db;
+}
 .paging li .selected {
   font-weight: bold;
   color: #ea2687;
+}
+.paging li .selected:hover {
+  color: #fff;
 }
 .paging li:first-child {
   margin-left: 0;

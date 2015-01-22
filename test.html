@@ -98,7 +98,7 @@
 ================================================== -->
 <s_list>
 <div class="search">
-	<h1 id="content" class="tab-access" tabindex="-1">'[##_list_conform_##]'에 해당되는 글 [##_list_count_##]건</h1>
+	<h1 id="content" class="js-tab-access" tabindex="-1">'[##_list_conform_##]'에 해당되는 글 [##_list_count_##]건</h1>
 	<form action="javascript:searchURL()">
 		<fieldset>
 			<legend>검색</legend>
@@ -123,7 +123,7 @@
 
 <s_rplist>
 <div class="search">
-	<h1 id="content" class="tab-access" tabindex="-1">'[##_rplist_conform_##]'에 해당되는 댓글 [##_rplist_count_##]건</h1>
+	<h1 id="content" class="js-tab-access" tabindex="-1">'[##_rplist_conform_##]'에 해당되는 댓글 [##_rplist_count_##]건</h1>
 		<ol>
 			<s_rplist_rep>
 			<li>
@@ -141,7 +141,7 @@
 ================================================== -->
 <s_local>
 <div class="localog" >
-	<h1 id="content" class="tab-access" tabindex="-1">Localog</h1>
+	<h1 id="content" class="js-tab-access" tabindex="-1">Localog</h1>
 	<s_local_spot_rep>
 	<div class="spot" style="margin-left: [##_local_spot_depth_##]px; padding: 0 15px;">[##_local_spot_##]</div>
 	</s_local_spot_rep>
@@ -155,7 +155,7 @@
 ================================================== -->
 <s_tag>
 <div class="taglog">
-	<h1 id="content" class="tab-access" tabindex="-1">Tags</h1>
+	<h1 id="content" class="js-tab-access" tabindex="-1">Tags</h1>
 	<ul>
 		<s_tag_rep>
 		<li><a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a></li>
@@ -168,7 +168,7 @@
 ================================================== -->
 <s_media>
 <div class="medialog">
-	<h1 id="content" class="tab-access" tabindex="-1">Medialog</h1>
+	<h1 id="content" class="js-tab-access" tabindex="-1">Medialog</h1>
 	[##_media_content_##]
 </div>
 </s_media>
@@ -177,7 +177,7 @@
 ================================================== -->
 <s_guest>
 <div class="guestbook typography">
-	<h1 id="content" class="tab-access" tabindex="-1">Guestbook</h1>
+	<h1 id="content" class="js-tab-access" tabindex="-1">Guestbook</h1>
 	<s_guest_input_form>
 		<s_guest_member>
 			<s_guest_form>
@@ -238,7 +238,7 @@
 <s_notice_rep>
 <div class="typography">
 	<header class="entry-header">
-		<h1 id="content" class="entry-title tab-access" tabindex="-1"><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h1>
+		<h1 id="content" class="entry-title js-tab-access" tabindex="-1"><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h1>
 		<div class="row row-nospace">
 			<div class="col-md-9">
 			<time class="updated" datetime="[##_article_rep_date_##]">[##_article_rep_date_##]</time>
@@ -275,7 +275,7 @@
 <s_article_protected>
 <div class="typography">
 	<header class="entry-header">
-		<h1 id="content" class="entry-title tab-access" tabindex="-1"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1>
+		<h1 id="content" class="entry-title js-tab-access" tabindex="-1"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1>
 		<div class="row row-nospace">
 			<div class="col-md-9">
 			<time class="updated" datetime="[##_article_rep_date_##]">[##_article_rep_date_##]</time>
@@ -319,7 +319,7 @@
 <!-- Entry : header
 ================================================== -->
 <header class="entry-header">
-	<h1 id="content" class="entry-title tab-access" tabindex="-1"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1>
+	<h1 id="content" class="entry-title js-tab-access" tabindex="-1"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1>
 	<div class="row row-nospace">
 		<div class="col-md-9">
 			<time class="updated" datetime="[##_article_rep_date_##]">[##_article_rep_date_##]</time>
@@ -480,7 +480,7 @@
 	<s_sidebar_element>
 	<!-- Catetories -->
 	<div class="widget">
-		<h3 id="categories" class="tab-access" tabindex="-1">Catetories</h3>
+		<h3 id="categories" class="js-tab-access" tabindex="-1">Catetories</h3>
 			[##_category_list_##]
 	</div>
 	</s_sidebar_element>
@@ -628,18 +628,10 @@
 <script>
 var markqueryURL = "[##_blog_link_##]";
 var markqueryRSS = "[##_rss_url_##]";
-var customSearchAPI = "013718955537204628931:t2_gar2chh4";
-
-// Utility
-function printButton(){window.print();};
-var splitURL = window.location.host + window.location.pathname;
-var pathArray = splitURL.split( '/' );
-if(pathArray[1] == "") {
-	$(".cover").addClass("cover-init");
-};
+var customSearchID = "013718955537204628931:t2_gar2chh4";
 
 // Google Custom Search API For HTML5
-function searchURL(){ window.location.href= '/search/' + looseURIEncode(document.getElementsByName('q')[0].value) + '?cx=' + customSearchAPI + '&cof=FORID%3A11&q=' + looseURIEncode(document.getElementsByName('q')[0].value);};
+function searchURL(){ window.location.href= '/search/' + looseURIEncode(document.getElementsByName('q')[0].value) + '?cx=' + customSearchID + '&cof=FORID%3A11&q=' + looseURIEncode(document.getElementsByName('q')[0].value);};
 var myCallback = function() {
   if (document.readyState == 'complete') {
     google.search.cse.element.render(
@@ -662,7 +654,7 @@ window.__gcse = {
   callback: myCallback
 };
 (function() {
-  var cx = customSearchAPI;
+  var cx = customSearchID;
   var gcse = document.createElement('script'); gcse.type = 'text/javascript';
   gcse.async = true;
   gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
@@ -670,7 +662,7 @@ window.__gcse = {
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
 })();
 
-// Markdown
+// Markdown Javascript API
 marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,
@@ -686,6 +678,8 @@ if(getMarkdown) {
   var setMarkdown = getMarkdown.innerText ? getMarkdown.innerText : getMarkdown.textContent;
 	$(".entry-markdown").html(marked(setMarkdown));
 };
+
+// Feed javascript API
 $(".js-widget-feed").rss(markqueryRSS, {
 	limit: 5,
 	effect: 'slideFast',
@@ -694,6 +688,21 @@ $(".js-widget-feed").rss(markqueryRSS, {
 	layoutTemplate: '<ul class=\"media-list\">{entries}</ul>',
 	entryTemplate: '<li class=\"media\"><a class=\"pull-left\" href=\"{url}\"><img class=\"media-object media-thumbnail\" src=\"{featuredImageUrl}\" alt=\"{featuredImageAlt}\" /></a><div class=\"media-body\"><h4><a href=\"{url}\">{title}</a></h4><small>{kdate}</small></div></li>'
 });
+
+// userFont API
+$("#js-user-font").userFont({
+	store: true,
+	userFontFamily: true,
+	startFontFamily: "malgun gothic"
+});
+
+// Utility
+function printButton(){window.print();};
+var splitURL = window.location.host + window.location.pathname;
+var pathArray = splitURL.split( '/' );
+if(pathArray[1] == "") {
+	$(".cover").addClass("cover-init");
+};
 </script>
 </div><!-- /.drawer-overlay -->
 </div><!-- /.animsition -->

@@ -203,7 +203,7 @@
       date:      entry.publishedDate,
       kdate: (function(entry) {
       var apidate = new Date(entry.publishedDate);
-      var ndate = apidate.getFullYear() + '년' + (apidate.getMonth() + 1) + '월' + apidate.getDate() + '일';
+      var ndate = apidate.getFullYear() + '년\n' + (apidate.getMonth() + 1) + '월\n' + apidate.getDate() + '일';
         return ndate
       })(entry),
 

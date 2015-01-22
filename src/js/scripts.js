@@ -10,12 +10,7 @@
       $('.drawer-dropdown-hover').hover(function(){
         $('[data-toggle="dropdown"]', this).trigger('click');
       });
-      $("#js-user-font").userFont({
-        store: true,
-        userFontFamily: true,
-        startFontFamily: "malgun gothic"
-      });
-      $('.tab-access').focus(function () {
+      $('.js-tab-access').focus(function () {
         var e = $(this);
         if (e.offset().top - $(window).scrollTop() < 51) {
           $('html, body').animate({
