@@ -11,6 +11,7 @@
   "outline-none": false,
   "qualified-headings": false,
   "regex-selectors": false,
+  "fallback-colors": false,
   "shorthand": false,
   "text-indent": false,
   "unique-headings": false,

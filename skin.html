@@ -11,7 +11,6 @@
 	<meta name="author" content="[##_blogger_##]">
 	<meta name="generator" content="markquery">
 	<title>[##_page_title_##] | [##_title_##]</title>
-	<link rel="author" href="./images/humans.txt">
 	<link rel="profile" href="http://microformats.org/profile/hcard">
 	<link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]">
 	<link rel="apple-touch-icon-precomposed" href="./images/apple-touch-icon-precomposed.png">
@@ -21,14 +20,10 @@
 	<meta name="msapplication-TileImage" content="./images/msapplication-114x114.png">
 	<meta name="msapplication-TileColor" content="#222222">
 	<link rel="stylesheet" href="./style.css">
-	<!--[if lt IE 9]>
-		<script async src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="./images/ie-row-fix.js"></script>
-		<link href="./images/ie.css" rel="stylesheet">
-	<![endif]-->
 </head>
 <body class="drawer drawer-left drawer-navbar drawer-fixed">
 <s_t3>
+<div class="animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
 <a class="sr-only sr-only-focusable" href="#content" tabindex="1">본문 바로가기</a>
 <a class="sr-only sr-only-focusable" href="#navigation" tabindex="2">내비게이션 바로가기</a>
 <a class="sr-only sr-only-focusable" href="#categories" tabindex="3">카테고리 바로가기</a>
@@ -97,18 +92,16 @@
 ================================================== -->
 <main role="main" class="main">
 <div class="row col-nospace"><!-- site layout : row -->
-<article role="article" class="col-sm-8 markdown hentry"><!-- site layout : article column -->
+<article role="article" class="col-sm-8 hentry"><!-- site layout : article column -->
 
 <!-- Search Page
 ================================================== -->
 <s_list>
 <div class="search">
-	<h1 id="content" class="tab-access" tabindex="-1">Search</h1>
+	<h1 id="content" class="tab-access" tabindex="-1">'[##_list_conform_##]'에 해당되는 글 [##_list_count_##]건</h1>
 	<form action="javascript:searchURL()">
 		<fieldset>
 			<legend>검색</legend>
-			<input type="hidden" value="" name="cx">
-			<input type="hidden" value="FORID:11" name="cof">
 			<input type="text" name="q" accesskey="s" placeholder="검색어 입력" class="input-search" aria-required="true">
 			<input type="submit" name="sa" value="검색" class="input-submit">
 		</fieldset>
@@ -123,11 +116,12 @@
 	</s_list_rep>
 	</ol>
 </div>
+<!-- search-result with HTML5 Markup -->
 </s_list>
 
 <s_rplist>
 <div class="search">
-	<h1 id="content" class="tab-access" tabindex="-1">Search</h1>
+	<h1 id="content" class="tab-access" tabindex="-1">'[##_rplist_conform_##]'에 해당되는 댓글 [##_rplist_count_##]건</h1>
 		<ol>
 			<s_rplist_rep>
 			<li>
@@ -180,7 +174,7 @@
 <!-- Guestbook
 ================================================== -->
 <s_guest>
-<div class="guestbook">
+<div class="guestbook typography">
 	<h1 id="content" class="tab-access" tabindex="-1">Guestbook</h1>
 	<s_guest_input_form>
 		<s_guest_member>
@@ -240,80 +234,86 @@
 <!-- Notice
 ================================================== -->
 <s_notice_rep>
-<header class="entry-header">
-	<h1 id="content" class="entry-title tab-access" tabindex="-1"><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h1>
-	<div class="row row-nospace">
-		<div class="col-md-9">
-		<time class="updated" datetime="[##_article_rep_date_##]">[##_article_rep_date_##]</time>
-		<p class="byline author vcard">Posted in <strong><a href="[##_blog_link_##]notice">Notice</a></strong>  by <span class="fn">[##_article_rep_author_##]</span></p>
-		</div>
-		<div class="col-md-3">
-			<div class="button-group font-group">
-				<button class="dropdown-toggle button font-button" type="button" role="button" aria-expanded="false" id="dropdownFontMenu" data-toggle="dropdown"><span class="sr-only">Toggle Dropdown</span>글꼴</button>
-				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownFontMenu">
-					<li><a href="#"><span class="fontfamily" data-fontfamily="'맑은 고딕', 'malgun gothic'">맑은 고딕</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="나눔바른고딕, 'NanumBarunGothic'">나눔바른고딕</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="나눔고딕, 'Nanum Gothic'">나눔고딕</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="다음_Regular, daum_Regular">다음</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="굴림, gulim">굴림</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="돋움, dotum">돋움</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="바탕, batang">바탕</span></a></li>
-					<li class="divider"></li>
-					<li><a class="help-font" href="http://markquery.com/docs/web-safe-font/" target="_blank">Web Safe Font</a></li>
-				</ul>
-				<button  class="fontsize-decrease button" title="Decrease font size">-</button>
-				<button  class="fontsize-increase button" title="Increase font size">+</button>
+<div class="typography">
+	<header class="entry-header">
+		<h1 id="content" class="entry-title tab-access" tabindex="-1"><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h1>
+		<div class="row row-nospace">
+			<div class="col-md-9">
+			<time class="updated" datetime="[##_article_rep_date_##]">[##_article_rep_date_##]</time>
+			<p class="byline author vcard">Posted in <strong><a href="[##_blog_link_##]notice">Notice</a></strong>  by <span class="fn">[##_article_rep_author_##]</span></p>
+			</div>
+			<div class="col-md-3">
+				<div class="button-group font-group">
+					<button class="dropdown-toggle button font-button" type="button" role="button" aria-expanded="false" id="dropdownFontMenu" data-toggle="dropdown"><span class="sr-only">Toggle Dropdown</span>글꼴</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownFontMenu">
+						<li><a href="#"><span class="fontfamily" data-fontfamily="'맑은 고딕', 'malgun gothic'">맑은 고딕</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="나눔바른고딕, 'NanumBarunGothic'">나눔바른고딕</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="나눔고딕, 'Nanum Gothic'">나눔고딕</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="다음_Regular, daum_Regular">다음</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="굴림, gulim">굴림</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="돋움, dotum">돋움</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="바탕, batang">바탕</span></a></li>
+						<li class="divider"></li>
+						<li><a class="help-font" href="http://markquery.com/docs/web-safe-font/" target="_blank">Web Safe Font</a></li>
+					</ul>
+					<button  class="fontsize-decrease button" title="Decrease font size">-</button>
+					<button  class="fontsize-increase button" title="Increase font size">+</button>
+				</div>
 			</div>
 		</div>
+	</header>
+	<div id="js-user-font" class="entry-content">
+	[##_notice_rep_desc_##]
 	</div>
-</header>
-<div id="js-user-font" class="entry-content">
-[##_notice_rep_desc_##]
-</div>
+</div><!-- /.typography -->
 </s_notice_rep>
 
 <!-- Protected
 ================================================== -->
 <s_article_protected>
-<header class="entry-header">
-	<h1 id="content" class="entry-title tab-access" tabindex="-1"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1>
-	<div class="row row-nospace">
-		<div class="col-md-9">
-		<time class="updated" datetime="[##_article_rep_date_##]">[##_article_rep_date_##]</time>
-		<p class="byline author vcard">Posted in <strong><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></strong>  by <span class="fn">[##_article_rep_author_##]</span></p>
-	</div>
-		<div class="col-md-3">
-			<div class="button-group font-group">
-				<button class="dropdown-toggle button font-button" type="button" role="button" aria-expanded="false" id="dropdownFontMenu" data-toggle="dropdown"><span class="sr-only">Toggle Dropdown</span>글꼴</button>
-				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownFontMenu">
-					<li><a href="#"><span class="fontfamily" data-fontfamily="'맑은 고딕', 'malgun gothic'">맑은 고딕</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="나눔바른고딕, 'NanumBarunGothic'">나눔바른고딕</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="나눔고딕, 'Nanum Gothic'">나눔고딕</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="다음_Regular, daum_Regular">다음</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="굴림, gulim">굴림</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="돋움, dotum">돋움</span></a></li>
-					<li><a href="#"><span class="fontfamily" data-fontfamily="바탕, batang">바탕</span></a></li>
-					<li class="divider"></li>
-					<li><a class="help-font" href="http://markquery.com/docs/web-safe-font/" target="_blank">Web Safe Font</a></li>
-				</ul>
-				<button  class="fontsize-decrease button" title="Decrease font size">-</button>
-				<button  class="fontsize-increase button" title="Increase font size">+</button>
+<div class="typography">
+	<header class="entry-header">
+		<h1 id="content" class="entry-title tab-access" tabindex="-1"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h1>
+		<div class="row row-nospace">
+			<div class="col-md-9">
+			<time class="updated" datetime="[##_article_rep_date_##]">[##_article_rep_date_##]</time>
+			<p class="byline author vcard">Posted in <strong><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></strong>  by <span class="fn">[##_article_rep_author_##]</span></p>
+		</div>
+			<div class="col-md-3">
+				<div class="button-group font-group">
+					<button class="dropdown-toggle button font-button" type="button" role="button" aria-expanded="false" id="dropdownFontMenu" data-toggle="dropdown"><span class="sr-only">Toggle Dropdown</span>글꼴</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownFontMenu">
+						<li><a href="#"><span class="fontfamily" data-fontfamily="'맑은 고딕', 'malgun gothic'">맑은 고딕</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="나눔바른고딕, 'NanumBarunGothic'">나눔바른고딕</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="나눔고딕, 'Nanum Gothic'">나눔고딕</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="다음_Regular, daum_Regular">다음</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="굴림, gulim">굴림</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="돋움, dotum">돋움</span></a></li>
+						<li><a href="#"><span class="fontfamily" data-fontfamily="바탕, batang">바탕</span></a></li>
+						<li class="divider"></li>
+						<li><a class="help-font" href="http://markquery.com/docs/web-safe-font/" target="_blank">Web Safe Font</a></li>
+					</ul>
+					<button  class="fontsize-decrease button" title="Decrease font size">-</button>
+					<button  class="fontsize-increase button" title="Increase font size">+</button>
+				</div>
 			</div>
 		</div>
+	</header>
+	<div id="js-user-font" class="entry-content">
+		<p>보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.</p>
+		<p><label for="[##_article_password_##]">비밀번호 ::</label>
+			<input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]" value="" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]">
+			<input type="button" class="btn" value="submit" onclick="[##_article_dissolve_##]" >
+		</p>
 	</div>
-</header>
-<div id="js-user-font" class="entry-content">
-	<p>보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.</p>
-	<p><label for="[##_article_password_##]">비밀번호 ::</label>
-		<input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]" value="" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]">
-		<input type="button" class="btn" value="submit" onclick="[##_article_dissolve_##]" >
-	</p>
-</div>
+</div><!-- /.typography -->
 </s_article_protected>
 
 <!-- Entry
 ================================================== -->
 <s_article_rep>
+<div class="typography">
+
 <!-- Entry : header
 ================================================== -->
 <header class="entry-header">
@@ -453,6 +453,8 @@
 		</div><!-- Entry : footer : comment -->
 	</s_rp>
 </div><!-- Entry : footer -->
+
+</div><!-- /.typography -->
 </s_article_rep>
 
 <!-- Paging
@@ -486,7 +488,7 @@
 	<div class="widget">
 		<div class="widget-feed-inner">
 		<h3>Articles</h3>
-			<div class="widget-feed"></div>
+			<div class="js-widget-feed"></div>
 		</div>
 	</div>
 	</s_sidebar_element>
@@ -613,14 +615,50 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="./images/jquery-1.10.2.min.js"><\/script>')</script>
 <!-- JavaScript -->
-<script src="./images/modernizr-2.6.2.min.js"></script>
 <script src="./images/app.min.js"></script>
+<script src="./images/jquery.animsition.min.js"></script>
+	<!--[if lt IE 9]>
+	<script async src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="./images/ie-row-fix.js"></script>
+	<link href="./images/ie.css" rel="stylesheet">
+	<![endif]-->
 <script>
 var markqueryURL = "[##_blog_link_##]";
 var markqueryRSS = "[##_rss_url_##]";
 var customSearchAPI = "";
+
+// Utility
+function printButton(){window.print();};
+var splitURL = window.location.host + window.location.pathname;
+var pathArray = splitURL.split( '/' );
+if(pathArray[1] == "") {
+	$(".cover").addClass("cover-init");
+};
+
+// Google Custom Search API with HTML5 Markup
+function searchURL(){ window.location.href= '/search/' + looseURIEncode(document.getElementsByName('q')[0].value) + '?cx=' + customSearchAPI + '&cof=FORID%3A11&q=' + looseURIEncode(document.getElementsByName('q')[0].value);};
+
+// Markdown Javascript API
+
+</script>
+<script>
+$(document).ready(function() {
+	$(".animsition").animsition();
+	$(".js-widget-feed").rss(markqueryRSS, {
+		limit: 5,
+		effect: 'slideFast',
+		layoutTemplate: '<ul class=\"media-list\">{entries}</ul>',
+		entryTemplate: '<li class=\"media\"><a class=\"pull-left\" href=\"{url}\"><img class=\"media-object media-thumbnail\" src=\"{featuredImageUrl}\" alt=\"{featuredImageAlt}\"></a><div class=\"media-body\"><h4><a href=\"{url}\">{title}</a></h4><small>{kdate}</small></div></li>'
+	});
+	$("#js-user-font").userFont({
+		store: true,
+		userFontFamily: true,
+		startFontFamily: "malgun gothic"
+	});
+});
 </script>
 </div><!-- /.drawer-overlay -->
+</div><!-- /.animsition -->
 </s_t3>
 </body>
 </html>

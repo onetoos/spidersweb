@@ -1,5 +1,5 @@
 /*!
- * Spider's Web version 4.0.0
+ * spidersweb version 4.0.0
  * markquery theme for tistory
  * repository : https://github.com/markquery/spidersweb.git
  * Author : Ungki.H <ungki.h@gmail.com>
@@ -374,6 +374,13 @@ th {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+}
+.third-party *,
+.third-party *:before,
+.third-party *:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
 }
 html {
   font-size: 62.5%;
@@ -1753,194 +1760,6 @@ td.visible-print {
        -o-transition: height .35s ease;
           transition: height .35s ease;
 }
-/* Markdown Default
-========================================================================== */
-.markdown {
-  min-height: 1000px;
-  border-right: 1px solid #eee;
-}
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6,
-.markdown p,
-.markdown small,
-.markdown blockquote,
-.markdown time,
-.markdown figcaption,
-.markdown table,
-.markdown dl {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.markdown table {
-  margin-right: 15px;
-  margin-left: 15px;
-}
-.markdown blockquote,
-.markdown ul,
-.markdown ol,
-.markdown dl,
-.markdown li,
-.markdown table,
-.markdown pre {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-  position: relative;
-  margin-top: 36px;
-  margin-bottom: 13px;
-  font-weight: bold;
-  cursor: text;
-
-  -webkit-font-smoothing: antialiased;
-}
-.markdown h1 {
-  padding-bottom: 13px;
-  font-size: 32px;
-  color: black;
-  border-bottom: 1px solid #eee;
-}
-.markdown h2 {
-  padding-bottom: 13px;
-  font-size: 27px;
-  color: black;
-  border-bottom: 1px solid #eee;
-}
-.markdown h3 {
-  padding-bottom: 13px;
-  border-bottom: 1px solid #eee;
-}
-.markdown h4 {
-  padding-bottom: 13px;
-  border-bottom: 1px solid #eee;
-}
-.markdown h5 {
-  font-size: 14px;
-  color: #777;
-}
-.markdown h6 {
-  font-size: 14px;
-  color: #777;
-}
-.markdown p {
-  text-align: justify;
-}
-.markdown hr {
-  border-top: 3px solid #ccc;
-  border-bottom: 3px solid #ccc;
-}
-.markdown blockquote {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #777;
-  border-left: 1px solid #ddd;
-}
-.markdown blockquote p {
-  padding-right: 0;
-  padding-left: 0;
-  margin: 0;
-}
-.markdown pre {
-  padding: 20px 10px;
-  overflow: auto;
-  font-size: 13px;
-  line-height: 19px;
-  background-color: #f8f8f8;
-}
-.markdown pre ul {
-  padding: 0 0 0 20px;
-  margin: 0;
-  list-style: square!important;
-}
-.markdown pre ul li {
-  padding: 0;
-  margin: 0;
-  text-indent: 10px;
-}
-.markdown pre code {
-  padding: 0;
-  margin: 0;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-.markdown code {
-  padding: 0 5px;
-  margin: 0 2px;
-  white-space: nowrap;
-  background-color: #f8f8f8;
-  border: 1px solid #eaeaea;
-  border-radius: 3px;
-}
-.markdown dl dt {
-  padding: 0;
-  margin: 15px 0 5px;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: bold;
-}
-.markdown dl dt:first-child {
-  padding: 0;
-}
-.markdown dl dt:first-child {
-  margin-top: 0;
-}
-.markdown dl dt:last-child {
-  margin-bottom: 0;
-}
-.markdown dl dd {
-  padding: 0 15px;
-  margin: 0 0 15px;
-}
-.markdown dl dd:first-child {
-  margin-top: 0;
-}
-.markdown dl dd:last-child {
-  margin-bottom: 0;
-}
-.markdown table tr {
-  padding: 0;
-  margin: 0;
-  background-color: white;
-  border-top: 1px solid #ccc;
-}
-.markdown table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
-.markdown table tr th {
-  padding: 6px 13px;
-  margin: 0;
-  font-weight: bold;
-  text-align: left;
-  border: 1px solid #ccc;
-}
-.markdown table tr th:first-child {
-  margin-top: 0;
-}
-.markdown table tr th:last-child {
-  margin-bottom: 0;
-}
-.markdown table tr td {
-  padding: 6px 13px;
-  margin: 0;
-  text-align: left;
-  border: 1px solid #ccc;
-}
-.markdown table tr td:first-child {
-  margin-top: 0;
-}
-.markdown table tr td:last-child {
-  margin-bottom: 0;
-}
 body.drawer-navbar.drawer-fixed {
   padding-top: 0;
 }
@@ -2705,7 +2524,7 @@ body {
 .cover.cover-init {
   display: block;
 }
-.cover figure img {
+.cover img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -2722,14 +2541,26 @@ body {
 .localog,
 .taglog,
 .medialog {
+  padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
 }
-.search h2,
-.localog h2,
-.taglog h2,
-.medialog h2 {
-  font-size: 16px;
-  border: 0;
+.search h1,
+.localog h1,
+.taglog h1,
+.medialog h1 {
+  position: relative;
+  padding-right: 15px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  cursor: text;
+  border-bottom: 1px solid #eee;
+
+  -webkit-font-smoothing: antialiased;
 }
 .search ul,
 .localog ul,
@@ -2743,17 +2574,17 @@ body {
   margin: 0 15px;
   list-style-position: inside;
 }
-.taglog ul li {
+.taglog li {
   display: inline;
 }
-.taglog ul li a {
+.taglog li a {
   padding: 3px;
   line-height: 3;
   color: #999;
   text-decoration: none;
   background-color: #f1f1f1;
 }
-.taglog ul li a:hover {
+.taglog li a:hover {
   padding: 3px;
   color: #fff;
   text-decoration: none;
@@ -2900,9 +2731,6 @@ body {
   padding: 20px 0;
   border-bottom: 1px solid #eee;
 }
-.trackback small {
-  padding: 0;
-}
 .trackback time {
   font-size: 13px;
   line-height: 19px;
@@ -2942,17 +2770,18 @@ body {
   list-style: none;
   border: none;
 }
-.comment small,
-.guestbook small {
-  padding: 0;
-}
 .comment time,
 .guestbook time {
   font-size: 13px;
   line-height: 19px;
 }
-.comment p.comment-body,
-.guestbook p.comment-body {
+.comment .comment-header,
+.guestbook .comment-header {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.comment .comment-body,
+.guestbook .comment-body {
   padding-top: 10px;
   margin-top: 10px;
   border-top: 1px solid #ddd;
@@ -2964,6 +2793,14 @@ body {
   margin-bottom: 40px;
   margin-left: 30px;
   border-left: 1px solid #ddd;
+}
+.comment .reply .comment-header,
+.guestbook .reply .comment-header,
+.comment .reply .comment-body,
+.guestbook .reply .comment-body,
+.comment .reply time,
+.guestbook .reply time {
+  padding: 0 15px 0 0;
 }
 .comment img,
 .guestbook img {
@@ -3228,6 +3065,64 @@ body {
   color: #fff;
   background-color: #00a1db;
 }
+/* google custom search v2
+-------------------------------------------------- */
+#search-result {
+  padding: 20px 15px;
+}
+.gsc-table-result,
+.gsc-thumbnail-inside,
+.gsc-url-top {
+  padding: 0!important;
+}
+.gsc-result .gs-title {
+  height: 1.5em!important;
+}
+.gsc-control-cse {
+  font-family: '맑은 고딕', 'Malgun Gothic', "돋움", dotum, Arial, sans-serif !important;
+}
+.gsc-input-box {
+  padding: 5px 0!important;
+}
+.gsc-input {
+  font-size: 13px!important;
+  line-height: 19px!important;
+}
+.cse .gsc-control-cse,
+.gsc-control-cse {
+  padding: 0!important;
+}
+input.gsc-search-button:hover,
+input.gsc-search-button:focus {
+  background-color: #f00!important;
+  background-image: none!important;
+          filter: none!important;
+  border-color: #c00101!important;
+
+  -webkit-filter: none!important;
+}
+.cse .gsc-search-button input.gsc-search-button-v2,
+input.gsc-search-button-v2 {
+  width: 13px!important;
+  min-width: 13px!important;
+  height: 12px!important;
+  padding: 6px 27px!important;
+  margin-top: 2px!important;
+}
+.cse input.gsc-search-button,
+input.gsc-search-button {
+  padding: 12px 28px!important;
+  font-family: inherit!important;
+  font-size: 11px!important;
+  font-weight: bold!important;
+  color: #fff!important;
+  background-color: #4d90fe!important;
+  border: 1px solid #3079ed!important;
+  border-radius: 2px 2px 2px 2px!important;
+}
+input.gsc-search-button {
+  margin-left: 5px!important;
+}
 /* widget
 -------------------------------------------------- */
 .widget {
@@ -3280,50 +3175,49 @@ body {
 }
 /* widget feed
 -------------------------------------------------- */
-.widget-feed h4 {
+.js-widget-feed h4 {
   margin: 0;
   font-size: 14px;
   color: #333;
 }
-.widget-feed h4 a {
+.js-widget-feed h4 a {
   padding-bottom: 2px;
 }
-.widget-feed h4 a:hover,
-.widget-feed h4 a:focus {
+.js-widget-feed h4 a:hover,
+.js-widget-feed h4 a:focus {
   padding-bottom: 2px;
   color: #10a4ff;
   text-decoration: none;
   border-bottom: 1px solid #7fbaee;
 }
-.widget-feed li {
+.js-widget-feed li {
   min-height: 70px;
+  padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
-.widget-feed p {
+.js-widget-feed p {
   font-size: 12px;
   line-height: 1.4;
   color: #999;
   text-align: justify;
 }
-.widget-feed p a {
+.js-widget-feed p a {
   padding-bottom: 2px;
   text-decoration: none;
 }
-.widget-feed p a:hover .widget-feed p a:focus {
+.js-widget-feed p a:hover .js-widget-feed p a:focus {
   padding-bottom: 2px;
   color: #333;
   text-decoration: none;
 }
-img.media-thumbnail {
-  width: 65px;
-  height: 50px;
-  padding: 3px;
-  border: 1px solid #c5c1ac;
-  border-radius: 5px;
-}
-img.media-thumbnail:hover {
+.media-thumbnail {
+  padding: 2px;
   -webkit-box-shadow: 0 0 7px #ceccb4;
           box-shadow: 0 0 7px #ceccb4;
+}
+.media-thumbnail:hover {
+  -webkit-box-shadow: 0 0 7px #222;
+          box-shadow: 0 0 7px #222;
 }
 .media-list {
   padding-left: 0;
@@ -3337,6 +3231,7 @@ img.media-thumbnail:hover {
 }
 .media > .pull-left {
   padding-right: 10px;
+  padding-left: 5px;
 }
 .media,
 .media-body {
@@ -3484,11 +3379,11 @@ img.media-thumbnail:hover {
 
   -webkit-user-drag: none;
 }
-.button:hover,
-.button:focus {
+.button:hover {
   background-color: #ddd;
 }
 .button:focus {
+  color: #00a1db;
   outline: 0;
 }
 .button::-moz-focus-inner {
@@ -3516,7 +3411,7 @@ ul.dropdown-menu {
   display: none;
   min-width: 160px;
   padding: 0;
-  margin: -1px 0 0;
+  margin: -1px 0 0 !important;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3582,6 +3477,104 @@ video {
   width: 100%;
   height: 100%;
 }
+/* animsition utility
+------------------------------------------------ */
+.animsition,
+.animsition-overlay {
+  position: relative;
+  opacity: 0;
+
+  -webkit-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.animsition-loading {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23ccc%22%3E%0A%20%20%3Cpath%20opacity%3D%22.25%22%20d%3D%22M16%200%20A16%2016%200%200%200%2016%2032%20A16%2016%200%200%200%2016%200%20M16%204%20A12%2012%200%200%201%2016%2028%20A12%2012%200%200%201%2016%204%22/%3E%0A%20%20%3Cpath%20d%3D%22M16%200%20A16%2016%200%200%201%2032%2016%20L28%2016%20A12%2012%200%200%200%2016%204z%22%3E%0A%20%20%20%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20from%3D%220%2016%2016%22%20to%3D%22360%2016%2016%22%20dur%3D%220.8s%22%20repeatCount%3D%22indefinite%22%20/%3E%0A%20%20%3C/path%3E%0A%3C/svg%3E%0A%0A) center center no-repeat;
+
+  -webkit-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.animsition-loading:after {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #aaa;
+  text-align: center;
+  content: "Loading";
+}
+.animsition-overlay-slide {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: .9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade-in {
+  0% {
+    opacity: .9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: .9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in {
+  -webkit-animation-name: fade-in;
+       -o-animation-name: fade-in;
+          animation-name: fade-in;
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .9;
+  }
+}
+@-o-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .9;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .9;
+  }
+}
+.fade-out {
+  -webkit-animation-name: fade-out;
+       -o-animation-name: fade-out;
+          animation-name: fade-out;
+}
 /* Tistory utility
 ------------------------------------------------ */
 .tistorytoolbar {
@@ -3609,6 +3602,10 @@ video {
 }
 .imageblock {
   max-width: 100%;
+}
+.imageblock .cap1 {
+  width: 100%!important;
+  text-align: center;
 }
 .img-responsive {
   width: auto\9;
@@ -3837,5 +3834,303 @@ video {
   .search .input-submit {
     display: none;
   }
+}
+/* Markdown Typography Default
+========================================================================== */
+.typography {
+  min-height: 300px;
+  border-right: 1px solid #eee;
+}
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6,
+.typography p,
+.typography small,
+.typography blockquote,
+.typography time,
+.typography figcaption,
+.typography table,
+.typography dl {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.typography table {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.typography blockquote,
+.typography ul,
+.typography ol,
+.typography dl,
+.typography li,
+.typography table,
+.typography pre {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6 {
+  position: relative;
+  margin-top: 36px;
+  margin-bottom: 13px;
+  font-weight: bold;
+  cursor: text;
+
+  -webkit-font-smoothing: antialiased;
+}
+.typography h1 {
+  padding-bottom: 13px;
+  font-size: 32px;
+  color: black;
+  border-bottom: 1px solid #eee;
+}
+.typography h2 {
+  padding-bottom: 13px;
+  font-size: 27px;
+  color: black;
+  border-bottom: 1px solid #eee;
+}
+.typography h3 {
+  padding-bottom: 13px;
+  border-bottom: 1px solid #eee;
+}
+.typography h4 {
+  padding-bottom: 13px;
+  border-bottom: 1px solid #eee;
+}
+.typography h5 {
+  font-size: 14px;
+  color: #777;
+}
+.typography h6 {
+  font-size: 14px;
+  color: #777;
+}
+.typography p {
+  text-align: justify;
+}
+.typography hr {
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+}
+.typography blockquote {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #777;
+  border-left: 1px solid #ddd;
+}
+.typography blockquote p {
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0;
+}
+.typography pre {
+  padding: 20px 10px;
+  overflow: auto;
+  font-size: 13px;
+  line-height: 19px;
+  background-color: #f8f8f8;
+}
+.typography pre ul {
+  padding: 0 0 0 20px;
+  margin: 0;
+  list-style: square!important;
+}
+.typography pre ul li {
+  padding: 0;
+  margin: 0;
+  text-indent: 10px;
+}
+.typography pre code {
+  padding: 0;
+  margin: 0;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.typography code {
+  padding: 0 5px;
+  margin: 0 2px;
+  white-space: nowrap;
+  background-color: #f8f8f8;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+}
+.typography dl dt {
+  padding: 0;
+  margin: 15px 0 5px;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+}
+.typography dl dt:first-child {
+  padding: 0;
+}
+.typography dl dt:first-child {
+  margin-top: 0;
+}
+.typography dl dt:last-child {
+  margin-bottom: 0;
+}
+.typography dl dd {
+  padding: 0 15px;
+  margin: 0 0 15px;
+}
+.typography dl dd:first-child {
+  margin-top: 0;
+}
+.typography dl dd:last-child {
+  margin-bottom: 0;
+}
+.typography table tr {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border-top: 1px solid #ccc;
+}
+.typography table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+.typography table tr th {
+  padding: 6px 13px;
+  margin: 0;
+  font-weight: bold;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+.typography table tr th:first-child {
+  margin-top: 0;
+}
+.typography table tr th:last-child {
+  margin-bottom: 0;
+}
+.typography table tr td {
+  padding: 6px 13px;
+  margin: 0;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+.typography table tr td:first-child {
+  margin-top: 0;
+}
+.typography table tr td:last-child {
+  margin-bottom: 0;
+}
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+php+coffeescript+bash */
+/**
+* prism.js default theme for JavaScript, CSS and HTML
+* Based on dabblet (http://dabblet.com)
+* @author Lea Verou
+*/
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+          hyphens: none;
+  color: black;
+  text-align: left;
+  text-shadow: 0 1px white;
+  word-break: normal;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  white-space: pre;
+
+  direction: ltr;
+      -ms-hyphens: none;
+}
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f5f2f0;
+}
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+.token.punctuation {
+  color: #999;
+}
+.namespace {
+  opacity: .7;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: #905;
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+  color: #690;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #a67f59;
+  background: rgba(255, 255, 255, .5);
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+.token.regex,
+.token.important {
+  color: #e90;
+}
+.token.important {
+  font-weight: bold;
+}
+.token.entity {
+  cursor: help;
 }
 /*# sourceMappingURL=app.css.map */

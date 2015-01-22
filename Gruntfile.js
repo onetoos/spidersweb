@@ -61,9 +61,9 @@ module.exports = function(grunt) {
           '<%= pkg.output %>/ie.css': '<%= pkg.source %>/css/ie/ie.less'
         }
       },
-      minify: {
+      compress: {
         options: {
-          cleancss: true
+          compress: true
         },
         files: {
           '<%= pkg.output %>/app.min.css': '<%= pkg.output %>/app.css',
@@ -243,7 +243,7 @@ module.exports = function(grunt) {
   'autoprefixer:source',
   'usebanner:source',
   'csscomb:source',
-  'less:minify',
+  'less:compress',
   ]);
 
   // ====================================================
@@ -269,7 +269,6 @@ module.exports = function(grunt) {
   // ====================================================
   grunt.registerTask('build', [
   'clean',
-//  'bower',
   'build-less',
   'build-js',
   'test',
