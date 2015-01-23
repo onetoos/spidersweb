@@ -248,6 +248,7 @@ module.exports = function(grunt) {
 
   // ====================================================
   grunt.registerTask('build-js', [
+  'concat',
   'uglify'
   ]);
 

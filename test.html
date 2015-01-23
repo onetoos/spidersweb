@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--[if IE 7 ]>    <html lang="ko" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="ko" class="no-js ie8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="ko" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="ko" class="no-js ie ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="ko" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="ko" class="no-js"> <!--<![endif]-->
 <head>
@@ -20,6 +20,10 @@
 	<meta name="msapplication-TileImage" content="./images/msapplication-114x114.png">
 	<meta name="msapplication-TileColor" content="#222222">
 	<link rel="stylesheet" href="./style.css">
+	<!--[if lt IE 9]>
+	<script async src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<link href="./images/ie.css" rel="stylesheet">
+	<![endif]-->
 </head>
 <body class="drawer drawer-left drawer-navbar drawer-fixed">
 <s_t3>
@@ -35,37 +39,34 @@
 			<span class="sr-only">toggle navigation</span>
 			<span class="drawer-hamberger-icon"></span>
 		</button>
+		<div class="drawer-banner"><a href="[##_blog_link_##]">[##_title_##]</a></div>
 	</div>
 	<div id="navigation" class="drawer-main drawer-navbar-default" tabindex="-1">
 		<nav class="container drawer-nav" role="navigation">
 			<div class="drawer-brand"><a href="[##_blog_link_##]" rel="home">[##_title_##]</a></div>
-			<ul>
-						<li><a href="/">menu</a></li>
-			</ul>
-			<ul>
-				<li class="dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="/">Menu 1</a></li>
-						<li><a href="/">Menu 2</a></li>
-						<li><a href="/">Menu 3</a></li>
-						<li><a href="/">Menu 4</a></li>
-						<li><a href="/">Menu 5</a></li>
+			<ul class="drawer-menu">
+				<li class="drawer-menu-item"><a href="/">menu</a></li>
+				<li class="drawer-menu-item dropdown drawer-dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+					<ul class="drawer-submenu dropdown-menu" role="menu">
+						<li class="drawer-submenu-item"><a href="/">Menu 1</a></li>
+						<li class="drawer-submenu-item"><a href="/">Menu 2</a></li>
+						<li class="drawer-submenu-item"><a href="/">Menu 3</a></li>
+						<li class="drawer-submenu-item"><a href="/">Menu 4</a></li>
+						<li class="drawer-submenu-item"><a href="/">Menu 5</a></li>
+					</ul>
+				</li>
+				<li class="drawer-menu-item dropdown drawer-dropdown-hover"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown(hover) <span class="caret"></span></a>
+					<ul class="drawer-submenu dropdown-menu" role="menu">
+						<li class="drawer-submenu-item"><a href="./">Menu 1</a></li>
+						<li class="drawer-submenu-item"><a href="./">Menu 2</a></li>
+						<li class="drawer-submenu-item"><a href="./">Menu 3</a></li>
+						<li class="drawer-submenu-item"><a href="./">Menu 4</a></li>
+						<li class="drawer-submenu-item"><a href="./">Menu 5</a></li>
 					</ul>
 				</li>
 			</ul>
-			<ul>
-				<li class="dropdown drawer-dropdown-hover"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown(hover) <span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="./">Menu 1</a></li>
-						<li><a href="./">Menu 2</a></li>
-						<li><a href="./">Menu 3</a></li>
-						<li><a href="./">Menu 4</a></li>
-						<li><a href="./">Menu 5</a></li>
-					</ul>
-				</li>
-			</ul>
-			<ul class="drawer-navbar-right">
-				<li class="drawer-search"><a href="/search" class="drawer-search-icon">Search</a></li>
+			<ul class="drawer-menu drawer-navbar-right">
+				<li class="drawer-menu-item drawer-search"><a href="/search" class="drawer-search-icon">Search</a></li>
 			</ul>
 			<div class="drawer-footer"><span></span></div>
 		</nav>
@@ -82,8 +83,8 @@
 <div class="row col-nospace cover">
 <div class="col-sm-12">
 	<figure>
-		<img src="./images/cover.jpg" alt="[##_desc_##]">
-		<figcaption>[##_desc_##]</figcaption>
+		<img class="cover-figure-img" src="./images/cover.jpg" alt="[##_desc_##]">
+		<figcaption class="cover-figcaption">[##_desc_##]</figcaption>
 	</figure>
 </div>
 </div>
@@ -601,7 +602,7 @@
 		</ul>
 		<!-- MARKQUERY AND OPENSOURCES LICENSE -->
 		<ul>
-			<li>Code Is Content by <a href="http://markquery.com/" target="_blank">마크쿼리</a> <img src="https://img.shields.io/github/release/markquery/spidersweb.svg?style=flat" alt=""></li>
+			<li>Code Is Content by <a href="http://markquery.com/" target="_blank">마크쿼리</a> <img class="hidden-ie" src="https://img.shields.io/github/release/markquery/spidersweb.svg?style=flat" alt=""></li>
 			<li class="text-muted">&middot;</li>
 			<li><a href="http://github.com/markquery/" target="_blank">GitHub</a></li>
 			<li class="text-muted">&middot;</li>
@@ -614,18 +615,17 @@
 </footer>
 
 <!-- jQuery -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="./images/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="./images/jquery-1.10.2.min.js"><\/script>')</script>
 <!-- JavaScript -->
-<script src="./images/app.min.js"></script>
-<script src="./images/marked.min.js"></script>
-<script src="./images/jquery.animsition.min.js"></script>
+<script type="text/javascript" src="./images/app.min.js"></script>
 	<!--[if lt IE 9]>
-	<script async src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="./images/ie-row-fix.js"></script>
-	<link href="./images/ie.css" rel="stylesheet">
 	<![endif]-->
-<script>
+<script type="text/javascript" src="./images/marked.min.js"></script>
+<script type="text/javascript" src="./images/jquery.animsition.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
 var markqueryURL = "[##_blog_link_##]";
 var markqueryRSS = "[##_rss_url_##]";
 var customSearchID = "013718955537204628931:t2_gar2chh4";
@@ -703,6 +703,7 @@ var pathArray = splitURL.split( '/' );
 if(pathArray[1] == "") {
 	$(".cover").addClass("cover-init");
 };
+//]]>
 </script>
 </div><!-- /.drawer-overlay -->
 </div><!-- /.animsition -->

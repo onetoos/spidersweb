@@ -15,6 +15,5 @@ marked.setOptions({
 var getMarkdown = document.getElementById('marked');
 if(getMarkdown) {
   var setMarkdown = getMarkdown.innerText ? getMarkdown.innerText : getMarkdown.textContent;
-  var markquery = marked(setMarkdown);
-  $(".entry-content").html(markquery);
+  $(".entry-markdown").html(marked(setMarkdown));
 };

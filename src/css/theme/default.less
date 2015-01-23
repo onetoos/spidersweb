@@ -16,17 +16,17 @@ body {
   &.cover-init {
     display: block;
   }
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  figcaption {
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-    display: none;
-  }
+}
+.cover-figure-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.cover-figcaption {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  display: none;
 }
 /* Pages
 -------------------------------------------------- */
@@ -522,7 +522,7 @@ body {
   height: 1.5em!important;
 }
 .gsc-control-cse {
-  font-family: '맑은 고딕', 'Malgun Gothic', "돋움", dotum, Arial, sans-serif!important;
+  font-family: '맑은 고딕', 'Malgun Gothic', "돋움", dotum, sans-serif!important;
 }
 .gsc-input-box{
   padding: 5px 0!important;
@@ -637,10 +637,18 @@ input.gsc-search-button {
       }
     }
   }
+  ul {
+    margin:15px 0;
+    padding: 0;
+    list-style-type:none;
+  }
   li {
     min-height:70px;
-    padding: 10px 0;
+    padding: 10px;
     border-bottom: 1px solid #eee;
+    &:last-child {
+      border-bottom: 0;
+    }
   }
   p {
     color: #999;
