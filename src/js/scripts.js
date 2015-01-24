@@ -1,30 +1,15 @@
-(function(window, $) {
-  var markquery = {
-    initialize: function() {
-
-      $("a[href=#]").click(function(e) {
-        e.preventDefault();
-      });
-      $(".animsition").animsition();
-      $(".drawer").drawer();
-      $('.drawer-dropdown-hover').hover(function(){
-        $('[data-toggle="dropdown"]', this).trigger('click');
-      });
-      $('.js-tab-access').focus(function () {
-        var e = $(this);
-        if (e.offset().top - $(window).scrollTop() < 51) {
-          $('html, body').animate({
-            scrollTop: e.offset().top - 51
-          }, 500);
-        }
-      });
-    }
-  };
-
-  $(document).ready(function() {
-    markquery.initialize();
+(function() {
+  $(function() {
+    $("a[href=#]").click(function(e) {
+      e.preventDefault();
+    });
+    $('.js-tab-access').focus(function () {
+      var e = $(this);
+      if (e.offset().top - $(window).scrollTop() < 51) {
+        $('html, body').animate({
+          scrollTop: e.offset().top - 51
+        }, 500);
+      }
+    });
   });
-
-  window.markquery = window.markquery || {};
-  window.markquery = markquery;
-})(window, window.jQuery);
+}).call(this);

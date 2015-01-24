@@ -2395,6 +2395,7 @@ body.drawer-navbar.drawer-fixed {
     padding: 0 15px;
     font-size: 90%;
     color: #555;
+    background-color: #f7f7f7;
   }
   .drawer-navbar-default .drawer-brand a:hover,
   .drawer-navbar-default .drawer-brand a:focus {
@@ -3501,7 +3502,7 @@ video {
 .animsition,
 .animsition-overlay {
   position: relative;
-  opacity: 0;
+  opacity: .1;
 
   -webkit-animation-fill-mode: both;
        -o-animation-fill-mode: both;
@@ -3525,7 +3526,7 @@ video {
   width: 100%;
   margin-top: 20px;
   font-size: 16px;
-  color: #aaa;
+  color: #222;
   text-align: center;
   content: "Loading";
 }

@@ -129,7 +129,7 @@
 
     detectFontFamily : function(font) {
       var testString  = '~iomwIOMW';
-      var containerId = 'is-font-available-container';
+      var containerId = 'font-container';
       var fontArray = font instanceof Array;
 
       if (!fontArray) {
@@ -175,12 +175,10 @@
     getDefaultFontFamily: function () {
       var _self = this;
       var defaultFf = _self.options.startFontFamily;
-      console.log(defaultFf);
       if(_self.options.userFontFamily) {
         if( _self.options.store === true && _self.options.storeIsDefined && store.enabled && _self.detectFontFamily(defaultFf)){
           var getFf = store.get('Ff') || defaultFf;
-          $("#js-user-font").css("font-family", getFf);
-          console.log(getFf);
+          $(".js-user-font").css("font-family", getFf);
         }
         _self.setDefaultFontFamily();
       }
@@ -196,9 +194,7 @@
           var currentFf =  $el.attr("data-fontfamily");
           if(_self.detectFontFamily(currentFf)) {
             store.set('Ff', currentFf);
-            $("#js-user-font").css("font-family", currentFf);
-          } else {
-            console.log(currentFf + "is not installed");
+            $(".js-user-font").css("font-family", currentFf);
           }
         });
       }

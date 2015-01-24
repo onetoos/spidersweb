@@ -17,7 +17,7 @@
       outputMode: 'json',
       effect: 'show',
       thumbnailSize: "C60x60",
-      imageAlt: "featured",
+      imageAlt: null,
       error: function() {
         console.log("jQuery RSS: url doesn't link to RSS-Feed");
       },
@@ -253,9 +253,6 @@
           for (var i in entry.content.match(/(<img.*?>)/gi)) {
             if( entry.content.match(/(<img.*?>)/gi)[i].indexOf(_self.options.imageAlt) > 0 ) {
               return entry.content.match(/(<img.*?>)/gi)[i].match(/alt="(.*?)"/)[1]
-            }
-            else {
-              return ""
             }
           }
         }

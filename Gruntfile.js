@@ -4,9 +4,15 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
   var jsFileList = [
-  '<%= pkg.source %>/js/plugins/*.min.js',
-  '<%= pkg.source %>/js/plugins/*.js',
-  '<%= pkg.source %>/js/*.js'
+  '<%= pkg.source %>/js/plugins/transition.js',
+  '<%= pkg.source %>/js/plugins/alert.js',
+  '<%= pkg.source %>/js/plugins/dropdown.js',
+  '<%= pkg.source %>/js/plugins/iscroll-lite.js',
+  '<%= pkg.source %>/js/plugins/jquery.drawer.js',
+  '<%= pkg.source %>/js/plugins/jquery.rss.js',
+  '<%= pkg.source %>/js/plugins/store.min.js',
+  '<%= pkg.source %>/js/plugins/jquery.userfont.js',
+  '<%= pkg.source %>/js/scripts.js'
   ];
 
   grunt.initConfig({
