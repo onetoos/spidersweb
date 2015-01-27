@@ -368,7 +368,7 @@
 
 
 <div class="entry-tags">
-<s_tag_label>Tags : [##_tag_label_rep_##]</s_tag_label>
+<s_tag_label>[##_tag_label_rep_##]</s_tag_label>
 </div>
 
 <!-- Entry : footer -->
@@ -641,6 +641,7 @@ var markquery = {
 		$('.drawer-dropdown-hover').hover(function(){
 			$('[data-toggle="dropdown"]', this).trigger('click');
 		});
+		$(".entry-tags").replaceText(/,/gi,'');
 	},
 	jsLoad: function() {
 		// Feed javascript API

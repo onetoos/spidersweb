@@ -138,12 +138,12 @@ body {
       background:#fff;
       padding:15px !important;
       width:100% !important;
-      th{
+      th {
         padding:10px !important;
         text-align:left;
         font-weight:normal;
         letter-spacing:0px;
-        a{
+        a {
           color:#888;
           font-size:13px;
         }
@@ -159,12 +159,51 @@ body {
 }
 .entry-tags {
   margin: 10px 0;
-  padding: 0 15px;
+  padding: 0 15px 0 20px;
+  min-height: 25px;
   a {
+    position: relative;
+    display: inline-block;
+    padding: 0 6px 0 8px;
+    margin: 4px 12px 4px 5px;
     color: #222;
-    &:hover,
-    &:focus {
-      color: #00a1db;
+    font-size: 12px;
+    background-color: #eee;
+    border-radius: 0 2px 2px 0;
+    text-decoration: none;
+    &:hover {
+      color: #FFF;
+      background-color: #00a1db;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      border: 2px solid #FFFFFF;
+      top: 10px;
+      left: -1px;
+      border-radius: 50%;
+    }
+    &:before {
+      border: solid transparent;
+      content: "";
+      height: 0;
+      right: 100%;
+      position: absolute;
+      width: 0;
+      border-width: 12px;
+      border-right-color: #eee;
+      top: 0px;
+    }
+    &:hover:before {
+      border: solid transparent;
+      content: "";
+      height: 0;
+      right: 100%;
+      position: absolute;
+      width: 0;
+      border-width: 12px;
+      border-right-color: #00a1db;
+      top: 0px;
     }
   }
 }

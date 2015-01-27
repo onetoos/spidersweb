@@ -2634,15 +2634,54 @@ body {
   text-align: right;
 }
 .entry-tags {
-  padding: 0 15px;
+  min-height: 25px;
+  padding: 0 15px 0 20px;
   margin: 10px 0;
 }
 .entry-tags a {
+  position: relative;
+  display: inline-block;
+  padding: 0 6px 0 8px;
+  margin: 4px 12px 4px 5px;
+  font-size: 12px;
   color: #222;
+  text-decoration: none;
+  background-color: #eee;
+  border-radius: 0 2px 2px 0;
 }
-.entry-tags a:hover,
-.entry-tags a:focus {
-  color: #00a1db;
+.entry-tags a:hover {
+  color: #fff;
+  background-color: #00a1db;
+}
+.entry-tags a:after {
+  position: absolute;
+  top: 10px;
+  left: -1px;
+  content: "";
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.entry-tags a:before {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 0;
+  height: 0;
+  content: "";
+  border: solid transparent;
+  border-width: 12px;
+  border-right-color: #eee;
+}
+.entry-tags a:hover:before {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 0;
+  height: 0;
+  content: "";
+  border: solid transparent;
+  border-width: 12px;
+  border-right-color: #00a1db;
 }
 .entry-footer {
   padding-top: 20px;

@@ -1,8 +1,10 @@
 (function() {
   $(function() {
+
     $("a[href=#]").click(function(e) {
       e.preventDefault();
     });
+
     $('.js-tab-access').focus(function () {
       var e = $(this);
       if (e.offset().top - $(window).scrollTop() < 51) {
@@ -11,5 +13,6 @@
         }, 500);
       }
     });
+
   });
 }).call(this);
