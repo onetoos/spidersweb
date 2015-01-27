@@ -6,7 +6,7 @@
   "homepage": "http://markquery.com",
   "source": "src",
   "output": "images",
-  "dist": "dist",
+  "distribution": "dist",
   "repository": {
     "type": "git",
     "url": "https://github.com/markquery/spidersweb.git"

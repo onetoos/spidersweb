@@ -816,10 +816,6 @@ input.gsc-search-button {
   &:hover {
     background-color: #ddd;
   }
-  &:focus {
-    color: #00a1db;
-    outline: 0;
-  }
   &::-moz-focus-inner {
     padding: 0;
     border: 0;
@@ -836,6 +832,12 @@ input.gsc-search-button {
     cursor: not-allowed;
     box-shadow: none;
   }
+}
+.minus-button {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAIUlEQVR4AWNkIACGiIIHDPJ45B8yMvwnZMJ/Cq0YHiEJAB3tBc8PD4VbAAAAAElFTkSuQmCCa5cb5d4d99bbf31ddb9452b87a635196') center center no-repeat;
+}
+.plus-button {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAMUlEQVR4AWNkQAYPGOSB5EMGBYQQqoL/MNFBpgDsctzgISNQF15ASAFhK4ZEQBGMbgCkZxPP6PIk8QAAAABJRU5ErkJgggcfda481a994abfce0c1c4b2f4fec23d6') center center no-repeat;
 }
 /* Dropdown
 ------------------------------------------------ */
@@ -908,36 +910,36 @@ video { max-width:100%; height: auto; }
 ------------------------------------------------ */
 .animsition,
 .animsition-overlay {
-  position:relative;
-  opacity:.1;
+  position: relative;
+  opacity: 0;
   animation-fill-mode: both;
 }
 // loading option
 .animsition-loading {
-  position:fixed;
+  position: fixed;
   animation-fill-mode: both;
-  top:0;
-  width:100%;
-  height:100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
   z-index: 100;
   background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23ccc%22%3E%0A%20%20%3Cpath%20opacity%3D%22.25%22%20d%3D%22M16%200%20A16%2016%200%200%200%2016%2032%20A16%2016%200%200%200%2016%200%20M16%204%20A12%2012%200%200%201%2016%2028%20A12%2012%200%200%201%2016%204%22/%3E%0A%20%20%3Cpath%20d%3D%22M16%200%20A16%2016%200%200%201%2032%2016%20L28%2016%20A12%2012%200%200%200%2016%204z%22%3E%0A%20%20%20%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20from%3D%220%2016%2016%22%20to%3D%22360%2016%2016%22%20dur%3D%220.8s%22%20repeatCount%3D%22indefinite%22%20/%3E%0A%20%20%3C/path%3E%0A%3C/svg%3E%0A%0A) center center no-repeat;
   &:after {
-    content:"Loading";
+    content: "Loading";
     color: #222;
     font-size: 16px;
-    top:50%;
-    position:fixed;
+    top: 50%;
+    position: fixed;
     text-align: center;
-    width:100%;
-    margin-top:20px;
+    width: 100%;
+    margin-top: 20px;
   }
 }
 // overlay option
 .animsition-overlay-slide {
-  position:fixed;
-  height:100%;
-  width:100%;
-  z-index:1;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
   background-color: #ddd;
 }
 @keyframes fade-in {
@@ -1133,16 +1135,16 @@ video { max-width:100%; height: auto; }
   .media-thumbnail {
     width: 60px;
   }
+  .search {
+    .input-submit {
+      display: none;
+    }
+  }
 }
 /* Small devices < 768px
 ------------------------- */
 @media screen and (max-width: 767px) {
   .skeleton {
     border: none;
-  }
-  .search {
-    .input-submit {
-      display: none;
-    }
   }
 }

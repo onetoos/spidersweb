@@ -10,7 +10,7 @@
 	<meta name="description" content="[##_desc_##]">
 	<meta name="author" content="[##_blogger_##]">
 	<meta name="generator" content="markquery">
-	<title>[##_page_title_##] | [##_title_##]</title>
+	<title>[##_page_title_##] [##_title_##]</title>
 	<link rel="profile" href="http://microformats.org/profile/hcard">
 	<link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]">
 	<link rel="apple-touch-icon-precomposed" href="./images/apple-touch-icon-precomposed.png">
@@ -41,7 +41,7 @@
 		</button>
 		<div class="drawer-banner"><a href="[##_blog_link_##]">[##_title_##]</a></div>
 	</div>
-	<div id="navigation" class="drawer-main drawer-navbar-default" tabindex="-1">
+	<div id="navigation" class="drawer-main drawer-navbar-default js-tab-access" tabindex="-1">
 		<nav class="container drawer-nav" role="navigation">
 			<div class="drawer-brand"><a href="[##_blog_link_##]" rel="home">[##_title_##]</a></div>
 			<ul class="drawer-menu">
@@ -65,9 +65,13 @@
 					</ul>
 				</li>
 			</ul>
-			<ul class="drawer-menu drawer-navbar-right">
-				<li class="drawer-menu-item drawer-search"><a href="/search" class="drawer-search-icon">Search</a></li>
-			</ul>
+			<form action="javascript:searchURL()" class="drawer-form drawer-form-right" role="search">
+			  <label class="sr-only">search</label>
+			  <div class="drawer-input-group">
+			  <input type="text" class="drawer-input" name="q" accesskey="s" placeholder="Search" aria-label="Search" required="required">
+			  </div>
+			  <button type="submit" name="sa" value="검색" class="drawer-form-btn"><span class="sr-only">submit</span></button>
+			</form>
 			<div class="drawer-footer"><span></span></div>
 		</nav>
 	</div>
@@ -103,7 +107,7 @@
 	<form action="javascript:searchURL()">
 		<fieldset>
 			<legend>검색</legend>
-			<input type="text" name="q" accesskey="s" placeholder="검색어 입력" class="input-search" aria-required="true">
+			<input type="text" name="q" accesskey="s" placeholder="검색어 입력" class="input-search" aria-label="Search" required="required">
 			<input type="submit" name="sa" value="검색" class="input-submit">
 		</fieldset>
 	</form>
@@ -117,52 +121,10 @@
 	</s_list_rep>
 	</ol>
 </div>
+<!-- search-result with HTML5 Markup -->
 <div class="third-party">
   <div id="search-result"></div>
 </div>
-<script>
-var myCallback = function() {
-	if (document.readyState != 'complete') {
-		//return google.setOnLoadCallback(gcseCallback, true);
-//			if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
-//				var ieversion=new Number(RegExp.$1);
-//				if (ieversion>=7) {
-					if (navigator.userAgent.toLowerCase().indexOf('msie') > 0)
-					jQuery(document).ready(iehandler);
-//				}
-//			}
-	  else {
-			google.setOnLoadCallback(function() {
-				google.search.cse.element.render(
-				{
-					div: "search-result",
-					tag: 'search'
-				});
-			}, true);
-		}
-	}
-};
-function iehandler( jQuery ) {
-	google.search.cse.element.render(
-		{
-			div: "search-result",
-			tag: 'search'
-		});
-};
-window.__gcse = {
-	parsetags: 'explicit',
-	callback: myCallback
-};
-(function() {
-	var cx = '013718955537204628931:t2_gar2chh4';
-	var gcse = document.createElement('script'); gcse.type = 'text/javascript';
-	gcse.async = true;
-	gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
-	'//www.google.com/cse/cse.js?cx=' + cx;
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-	//document.body.appendChild(gcse);
-})();
-</script>
 </s_list>
 
 <s_rplist>
@@ -300,10 +262,10 @@ window.__gcse = {
 						<li><a href="#"><span class="fontfamily" data-fontfamily="돋움, dotum">돋움</span></a></li>
 						<li><a href="#"><span class="fontfamily" data-fontfamily="바탕, batang">바탕</span></a></li>
 						<li class="divider"></li>
-						<li><a class="help-font" href="http://markquery.com/docs/web-safe-font/" target="_blank">Web Safe Font</a></li>
+						<li><a class="font-help" href="http://markquery.com/docs/web-safe-font/" target="_blank">Web Safe Font</a></li>
 					</ul>
-					<button  class="fontsize-decrease button" title="Decrease font size">-</button>
-					<button  class="fontsize-increase button" title="Increase font size">+</button>
+					<button  class="fontsize-decrease button minus-button" title="Decrease font size">-</button>
+					<button  class="fontsize-increase button plus-button" title="Increase font size">+</button>
 				</div>
 			</div>
 		</div>
@@ -337,10 +299,10 @@ window.__gcse = {
 						<li><a href="#"><span class="fontfamily" data-fontfamily="돋움, dotum">돋움</span></a></li>
 						<li><a href="#"><span class="fontfamily" data-fontfamily="바탕, batang">바탕</span></a></li>
 						<li class="divider"></li>
-						<li><a class="help-font" href="http://markquery.com/docs/web-safe-font/" target="_blank">Web Safe Font</a></li>
+						<li><a class="font-help" href="http://markquery.com/docs/web-safe-font/" target="_blank">Web Safe Font</a></li>
 					</ul>
-					<button  class="fontsize-decrease button" title="Decrease font size">-</button>
-					<button  class="fontsize-increase button" title="Increase font size">+</button>
+					<button  class="fontsize-decrease button minus-button" title="Decrease font size">-</button>
+					<button  class="fontsize-increase button plus-button" title="Increase font size">+</button>
 				</div>
 			</div>
 		</div>
@@ -381,10 +343,10 @@ window.__gcse = {
 					<li><a href="#"><span class="fontfamily" data-fontfamily="돋움, dotum">돋움</span></a></li>
 					<li><a href="#"><span class="fontfamily" data-fontfamily="바탕, batang">바탕</span></a></li>
 					<li class="divider"></li>
-					<li><a class="help-font" href="http://markquery.com/docs/web-safe-font/" target="_blank">Web Safe Font</a></li>
+					<li><a class="font-help" href="http://markquery.com/docs/web-safe-font/" target="_blank">Web Safe Font</a></li>
 				</ul>
-				<button class="fontsize-decrease button" title="Decrease font size">-</button>
-				<button class="fontsize-increase button" title="Increase font size">+</button>
+				<button  class="fontsize-decrease button minus-button" title="Decrease font size">-</button>
+				<button  class="fontsize-increase button plus-button" title="Increase font size">+</button>
 			</div>
 		</div>
 	</div>
@@ -643,7 +605,6 @@ window.__gcse = {
 			<li>Today : [##_count_today_##]</li>
 			<li>Yesterday : [##_count_yesterday_##]</li>
 		</ul>
-		<!-- MARKQUERY AND OPENSOURCES LICENSE -->
 		<ul>
 			<li>Code Is Content by <a href="http://markquery.com/" target="_blank">마크쿼리</a> <img class="hidden-ie" src="https://img.shields.io/github/release/markquery/spidersweb.svg?style=flat" alt=""></li>
 			<li class="text-muted">&middot;</li>
@@ -686,7 +647,6 @@ var markquery = {
 		// Feed javascript API
 		$(".js-widget-feed").rss(markqueryRSS, {
 			limit: 5,
-			effect: 'slideFast',
 			thumbnailSize: "C60x60",
 			imageAlt: "대표",
 			layoutTemplate: '<ul class="media-list">{entries}</ul>',
@@ -722,14 +682,15 @@ window.markquery = markquery;
 
 // Google Custom Search URL
 function searchURL(){ window.location.href= '/search/' + looseURIEncode(document.getElementsByName('q')[0].value) + '?cx=' + customSearchID + '&cof=FORID%3A11&q=' + looseURIEncode(document.getElementsByName('q')[0].value);};
+
 // Google Custom Search API For HTML5
-function myCallback() {
+var myCallback = function() {
 	if (document.readyState != 'complete') {
-		if (navigator.userAgent.toLowerCase().indexOf('msie') > 0)
-		jQuery(document).ready(iehandler);
-	else {
-		google.setOnLoadCallback(function() {
-			google.search.cse.element.render(
+			if (navigator.userAgent.toLowerCase().indexOf('msie') > 0)
+				jQuery(document).ready(iehandler);
+		else {
+			google.setOnLoadCallback(function() {
+				google.search.cse.element.render(
 				{
 					div: "search-result",
 					tag: 'search'
@@ -738,19 +699,19 @@ function myCallback() {
 		}
 	}
 };
-window.__gcse = {
-		parsetags: 'explicit',
-		callback: myCallback
-	};
-
-function iehandler( jQuery ) {
-	google.search.cse.element.render({
+function iehandler(jQuery) {
+	google.search.cse.element.render(
+		{
 			div: "search-result",
 			tag: 'search'
-	});
+		});
+};
+window.__gcse = {
+	parsetags: 'explicit',
+	callback: myCallback
 };
 (function() {
-	var cx = '013718955537204628931:t2_gar2chh4';
+	var cx = customSearchID;
 	var gcse = document.createElement('script'); gcse.type = 'text/javascript';
 	gcse.async = true;
 	gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +

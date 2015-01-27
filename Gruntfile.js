@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     },
     // ====================================================
     clean: {
-      dist: '<%= pkg.dist %>'
+      dist: '<%= pkg.distribution %>'
     },
     // ====================================================
     less: {
@@ -165,7 +165,7 @@ module.exports = function(grunt) {
         'app.js',
         'app.min.js',
         ],
-        dest: '<%= pkg.dist %>/js'
+        dest: '<%= pkg.distribution %>/js'
       },
       css: {
         expand: true,
@@ -175,7 +175,7 @@ module.exports = function(grunt) {
         'app.css.map',
         'ie.css'
         ],
-        dest: '<%= pkg.dist %>/css'
+        dest: '<%= pkg.distribution %>/css'
       }
     },
     // ====================================================
