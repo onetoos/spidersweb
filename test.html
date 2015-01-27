@@ -28,10 +28,9 @@
 <body class="drawer drawer-left drawer-navbar drawer-fixed">
 <s_t3>
 <div class="animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
-<a class="sr-only sr-only-focusable" href="#content" tabindex="1">본문 바로가기</a>
-<a class="sr-only sr-only-focusable" href="#navigation" tabindex="2">내비게이션 바로가기</a>
-<a class="sr-only sr-only-focusable" href="#categories" tabindex="3">카테고리 바로가기</a>
-<a class="sr-only sr-only-focusable" href="/search" tabindex="4">검색 바로가기</a>
+<a class="sr-only sr-only-focusable" href="#content" tabindex="10">본문 바로가기</a>
+<a class="sr-only sr-only-focusable" href="#navigation" tabindex="11">내비게이션 바로가기</a>
+<a class="sr-only sr-only-focusable" href="#categories" tabindex="12">카테고리 바로가기</a>
 
 <header role="banner">
 	<div class="drawer-header">
@@ -68,7 +67,7 @@
 			<form action="javascript:searchURL()" class="drawer-form drawer-form-right" role="search">
 			  <label class="sr-only">search</label>
 			  <div class="drawer-input-group">
-			  <input type="text" class="drawer-input" name="q" accesskey="s" placeholder="Search" aria-label="Search" required="required">
+			  <input type="text" class="drawer-input" name="q" placeholder="Search" aria-label="Search" required="required" tabindex="1">
 			  </div>
 			  <button type="submit" name="sa" value="검색" class="drawer-form-btn"><span class="sr-only">submit</span></button>
 			</form>
@@ -104,10 +103,10 @@
 <s_list>
 <div class="search">
 	<h1 id="content" class="js-tab-access" tabindex="-1">'[##_list_conform_##]'에 해당되는 글 [##_list_count_##]건</h1>
-	<form action="javascript:searchURL()">
+	<form action="javascript:searchPage()">
 		<fieldset>
 			<legend>검색</legend>
-			<input type="text" name="q" accesskey="s" placeholder="검색어 입력" class="input-search" aria-label="Search" required="required">
+			<input type="text" name="searchPage-q" accesskey="s" placeholder="검색어 입력" class="input-search" aria-label="Search" required="required">
 			<input type="submit" name="sa" value="검색" class="input-submit">
 		</fieldset>
 	</form>
@@ -643,7 +642,7 @@ var markquery = {
 			$('[data-toggle="dropdown"]', this).trigger('click');
 		});
 	},
-	jquerySetup: function() {
+	jsLoad: function() {
 		// Feed javascript API
 		$(".js-widget-feed").rss(markqueryRSS, {
 			limit: 5,
@@ -674,14 +673,16 @@ jQuery(document).ready(function() {
 	markquery.jqueryReady();
 });
 jQuery(window).load(function(){
-	markquery.jquerySetup();
+	markquery.jsLoad();
 });
 
 window.markquery = window.markquery || {};
 window.markquery = markquery;
 
 // Google Custom Search URL
-function searchURL(){ window.location.href= '/search/' + looseURIEncode(document.getElementsByName('q')[0].value) + '?cx=' + customSearchID + '&cof=FORID%3A11&q=' + looseURIEncode(document.getElementsByName('q')[0].value);};
+function searchURL(){ window.location.href = '/search/' + looseURIEncode(document.getElementsByName('q')[0].value) + '?cx=' + customSearchID + '&cof=FORID%3A11&q=' + looseURIEncode(document.getElementsByName('q')[0].value);};
+
+function searchPage(){ window.location.href = '/search/' + looseURIEncode(document.getElementsByName('searchPage-q')[0].value) + '?cx=' + customSearchID + '&cof=FORID%3A11&q=' + looseURIEncode(document.getElementsByName('searchPage-q')[0].value);};
 
 // Google Custom Search API For HTML5
 var myCallback = function() {
