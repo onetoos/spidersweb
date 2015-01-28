@@ -2152,11 +2152,11 @@ body.drawer-navbar.drawer-fixed {
 .drawer-navbar-default .drawer-form {
   float: none;
   height: 40px;
-  padding: 0;
-  margin: 5px 10px;
-  background-color: #fff;
-  border: 1px solid #eee;
-  border-radius: 50px;
+  padding: 0 15px;
+  margin: 15px 0;
+  background-color: #222;
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
 }
 .drawer-navbar-default .drawer-form.drawer-form-right {
   float: none;
@@ -2165,31 +2165,18 @@ body.drawer-navbar.drawer-fixed {
   float: left;
 }
 .drawer-navbar-default .drawer-form .drawer-input {
-  width: 1px;
   min-height: 30px;
   -webkit-appearance: none;
   padding: 5px 0;
   font-size: 14px;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #222;
   border: 0;
   outline: 0;
-  opacity: 0;
-  -webkit-transition: all .6s ease;
-       -o-transition: all .6s ease;
-          transition: all .6s ease;
-}
-.drawer-navbar-default .drawer-form .drawer-input:focus {
-  width: 100px;
-  margin-left: 20px;
-  opacity: 1;
-}
-.drawer-navbar-default .drawer-form:hover .drawer-input,
-.drawer-navbar-default .drawer-form:focus .drawer-input {
-  width: 100px;
-  margin-left: 20px;
-  opacity: 1;
 }
 .drawer-navbar-default .drawer-form .drawer-form-btn {
-  float: left;
+  float: right;
   width: 36px;
   height: 36px;
   font-weight: normal;
@@ -2200,7 +2187,7 @@ body.drawer-navbar.drawer-fixed {
       touch-action: manipulation;
   cursor: pointer;
   background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIyMTZweCIgaGVpZ2h0PSIxNDZweCIgdmlld0JveD0iMCAwIDIxNiAxNDYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIxNiAxNDYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZD0iTTE3Mi43NywxMjMuMDI1TDE0NC44MjUsOTUuMDhjNi43MzUtOS43MjIsMTAuMTA0LTIwLjU1OSwxMC4xMDQtMzIuNTA4YzAtNy43NjctMS41MDgtMTUuMTk1LTQuNTIzLTIyLjI4Mw0KCWMtMy4wMTQtNy4wODktNy4wODgtMTMuMTk5LTEyLjIyMS0xOC4zMzJzLTExLjI0Mi05LjIwNy0xOC4zMy0xMi4yMjFjLTcuMDktMy4wMTUtMTQuNTE4LTQuNTIyLTIyLjI4NS00LjUyMg0KCWMtNy43NjcsMC0xNS4xOTUsMS41MDctMjIuMjgzLDQuNTIyYy03LjA4OSwzLjAxNC0xMy4xOTksNy4wODgtMTguMzMyLDEyLjIyMWMtNS4xMzMsNS4xMzMtOS4yMDcsMTEuMjQ0LTEyLjIyMSwxOC4zMzINCgljLTMuMDE1LDcuMDg5LTQuNTIyLDE0LjUxNi00LjUyMiwyMi4yODNjMCw3Ljc2NywxLjUwNywxNS4xOTMsNC41MjIsMjIuMjgzYzMuMDE0LDcuMDg4LDcuMDg4LDEzLjE5NywxMi4yMjEsMTguMzMNCgljNS4xMzMsNS4xMzQsMTEuMjQ0LDkuMjA3LDE4LjMzMiwxMi4yMjJjNy4wODksMy4wMTUsMTQuNTE2LDQuNTIyLDIyLjI4Myw0LjUyMmMxMS45NTEsMCwyMi43ODctMy4zNjksMzIuNTA5LTEwLjEwNGwyNy45NDUsMjcuODYzDQoJYzEuOTU1LDIuMDY0LDQuMzk3LDMuMDk2LDcuMzMyLDMuMDk2YzIuODI0LDAsNS4yNy0xLjAzMiw3LjMzMi0zLjA5NmMyLjA2NC0yLjA2MywzLjA5Ni00LjUwOCwzLjA5Ni03LjMzMg0KCUMxNzUuNzg1LDEyNy40NzksMTc0Ljc4MSwxMjUuMDM0LDE3Mi43NywxMjMuMDI1eiBNMTIzLjM1Nyw4OC4zNTdjLTcuMTQzLDcuMTQzLTE1LjczOCwxMC43MTQtMjUuNzg3LDEwLjcxNA0KCWMtMTAuMDQ4LDAtMTguNjQzLTMuNTcyLTI1Ljc4Ni0xMC43MTRjLTcuMTQzLTcuMTQzLTEwLjcxNC0xNS43MzctMTAuNzE0LTI1Ljc4NmMwLTEwLjA0OCwzLjU3Mi0xOC42NDQsMTAuNzE0LTI1Ljc4Ng0KCWM3LjE0Mi03LjE0MywxNS43MzgtMTAuNzE0LDI1Ljc4Ni0xMC43MTRjMTAuMDQ4LDAsMTguNjQzLDMuNTcyLDI1Ljc4NywxMC43MTRjNy4xNDMsNy4xNDIsMTAuNzE1LDE1LjczOCwxMC43MTUsMjUuNzg2DQoJQzEzNC4wNzIsNzIuNjIsMTMwLjQ5OSw4MS4yMTQsMTIzLjM1Nyw4OC4zNTd6Ii8+DQo8L3N2Zz4NCg==") center center no-repeat;
-  background-color: transparent;
+  background-color: transparen;
   -webkit-background-size: 36px 36px;
           background-size: 36px;
   border: 0;
@@ -2443,12 +2430,43 @@ body.drawer-navbar.drawer-fixed {
   }
   .drawer-navbar-default .drawer-form {
     float: left;
+    height: 40px;
+    padding: 0;
+    margin: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 50px;
   }
   .drawer-navbar-default .drawer-form.drawer-form-right {
     float: right;
   }
   .drawer-navbar-default .drawer-form:hover {
     border-color: #00a1db;
+  }
+  .drawer-navbar-default .drawer-form .drawer-input {
+    width: 1px;
+    color: #222;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+    opacity: 0;
+    -webkit-transition: all .6s ease;
+         -o-transition: all .6s ease;
+            transition: all .6s ease;
+  }
+  .drawer-navbar-default .drawer-form .drawer-input:focus {
+    width: 100px;
+    margin-left: 20px;
+    opacity: 1;
+  }
+  .drawer-navbar-default .drawer-form:hover .drawer-input,
+  .drawer-navbar-default .drawer-form:focus .drawer-input {
+    width: 100px;
+    margin-left: 20px;
+    opacity: 1;
+  }
+  .drawer-navbar-default .drawer-form .drawer-form-btn {
+    float: left;
   }
 }
 @media (min-width: 1200px) {

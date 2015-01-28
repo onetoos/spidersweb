@@ -162,11 +162,40 @@
     }
     .drawer-form {
       float: left;
+      margin: 5px 10px;
+      padding: 0;
+      height: 40px;
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 50px;
       &.drawer-form-right {
         float: right;
       }
       &:hover {
         border-color: #00a1db;
+      }
+      .drawer-input {
+        width: 1px;
+        border: 0;
+        outline: 0;
+        opacity: 0;
+        color: #222;
+        background-color: #fff;
+        transition: all .6s ease;
+        &:focus {
+          width: 100px;
+          margin-left: 20px;
+          opacity: 1;
+        }
+      }
+      &:hover .drawer-input,
+      &:focus .drawer-input {
+        width: 100px;
+        margin-left: 20px;
+        opacity: 1;
+      }
+      .drawer-form-btn {
+        float: left;
       }
     }
   }
