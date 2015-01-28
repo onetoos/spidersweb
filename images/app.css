@@ -2555,19 +2555,6 @@ body {
 }
 .taglog li {
   display: inline;
-  /*    a {
-      padding:3px;
-      line-height:3;
-      color:#999;
-      text-decoration: none;
-      background-color:#f1f1f1;
-      &:hover {
-        padding:3px;
-        color:#fff;
-        text-decoration: none;
-        background-color: #10a4ff;
-      }
-    }*/
 }
 /* Content
 -------------------------------------------------- */
@@ -3735,8 +3722,14 @@ video {
   text-align: left!important;
   letter-spacing: normal!important;
 }
+.tt-post-title a {
+  font-family: '맑은 고딕', 'Malgun Gothic', '돋움', dotum, sans-serif !important;
+}
 .tt-post-thumb {
   padding-bottom: 5px!important;
+}
+.item-120161 {
+  max-height: 148!important;
 }
 .tt-post-summary {
   font: inherit!important;
@@ -3761,6 +3754,18 @@ video {
   font: inherit!important;
   line-height: 1.8!important;
   letter-spacing: normal!important;
+}
+.tiedition-m-6 {
+  margin-right: -6px !important;
+  margin-left: -6px !important;
+}
+.tiedition-p-6 {
+  padding-right: 6px !important;
+  padding-left: 6px !important;
+}
+.h-m-6 {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
 }
 .multi-columns-row .first-in-row {
   clear: left;
