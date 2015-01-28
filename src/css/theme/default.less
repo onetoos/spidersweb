@@ -60,19 +60,6 @@ body {
 .taglog {
   li {
     display:inline;
-    a {
-      padding:3px;
-      line-height:3;
-      color:#999;
-      text-decoration: none;
-      background-color:#f1f1f1;
-      &:hover {
-        padding:3px;
-        color:#fff;
-        text-decoration: none;
-        background-color: #10a4ff;
-      }
-    }
   }
 }
 /* Content
@@ -161,6 +148,9 @@ body {
   margin: 10px 0;
   padding: 0 15px 0 20px;
   min-height: 25px;
+}
+.taglog li,
+.entry-tags {
   a {
     position: relative;
     display: inline-block;
@@ -742,7 +732,7 @@ input.gsc-search-button {
 -------------------------------------------------- */
 .footer {
   background: url(./images/footer.png);
-  text-align: center;
+  text-align: left;
   color: #fff;
   font-size: 12px;
   padding: 30px 20px;
@@ -768,6 +758,19 @@ input.gsc-search-button {
     }
   }
 }
+/* Googole AD
+-------------------------------------------------- */
+.widget-google-ad {
+  padding: 10px;
+}
+.entry-footer-ad {
+  padding: 20px 0;
+  margin: 20px 0 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background-color: #fbfbfb;
+}
+
 /* utility
 ------------------------------------------------ */
 ::selection {
@@ -1000,16 +1003,19 @@ video { max-width:100%; height: auto; }
 /* Tistory utility
 ------------------------------------------------ */
 .tistorytoolbar {
-  display: none !important;
+  display: none!important;
 }
 .entry-ccl {
   padding: 0 15px;
 }
 .txc-emo,.entry-ccl-by,.entry-ccl-nc,.entry-ccl-nd {
-  display: inline-block !important;
+  display: inline-block!important;
 }
 .txc-table {
   width:100%;
+}
+.tt-share-entry-with-sns .tt-sns-wrap {
+  padding: 0 15px!important;
 }
 .entry-content img {
   display: inline-block;
@@ -1187,5 +1193,8 @@ video { max-width:100%; height: auto; }
 @media screen and (max-width: 767px) {
   .skeleton {
     border: none;
+  }
+  .footer {
+    text-align: left;
   }
 }

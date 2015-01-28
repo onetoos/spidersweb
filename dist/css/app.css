@@ -2555,19 +2555,19 @@ body {
 }
 .taglog li {
   display: inline;
-}
-.taglog li a {
-  padding: 3px;
-  line-height: 3;
-  color: #999;
-  text-decoration: none;
-  background-color: #f1f1f1;
-}
-.taglog li a:hover {
-  padding: 3px;
-  color: #fff;
-  text-decoration: none;
-  background-color: #10a4ff;
+  /*    a {
+      padding:3px;
+      line-height:3;
+      color:#999;
+      text-decoration: none;
+      background-color:#f1f1f1;
+      &:hover {
+        padding:3px;
+        color:#fff;
+        text-decoration: none;
+        background-color: #10a4ff;
+      }
+    }*/
 }
 /* Content
 -------------------------------------------------- */
@@ -2656,6 +2656,7 @@ body {
   padding: 0 15px 0 20px;
   margin: 10px 0;
 }
+.taglog li a,
 .entry-tags a {
   position: relative;
   display: inline-block;
@@ -2667,10 +2668,12 @@ body {
   background-color: #eee;
   border-radius: 0 2px 2px 0;
 }
+.taglog li a:hover,
 .entry-tags a:hover {
   color: #fff;
   background-color: #00a1db;
 }
+.taglog li a:after,
 .entry-tags a:after {
   position: absolute;
   top: 10px;
@@ -2679,6 +2682,7 @@ body {
   border: 2px solid #fff;
   border-radius: 50%;
 }
+.taglog li a:before,
 .entry-tags a:before {
   position: absolute;
   top: 0;
@@ -2690,6 +2694,7 @@ body {
   border-width: 12px;
   border-right-color: #eee;
 }
+.taglog li a:hover:before,
 .entry-tags a:hover:before {
   position: absolute;
   top: 0;
@@ -3283,7 +3288,7 @@ input.gsc-search-button {
   padding: 30px 20px;
   font-size: 12px;
   color: #fff;
-  text-align: center;
+  text-align: left;
   background: url(images/footer.png);
 }
 .footer ul {
@@ -3306,6 +3311,18 @@ input.gsc-search-button {
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid #fff;
+}
+/* Googole AD
+-------------------------------------------------- */
+.widget-google-ad {
+  padding: 10px;
+}
+.entry-footer-ad {
+  padding: 20px 0;
+  margin: 20px 0 0;
+  background-color: #fbfbfb;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 /* utility
 ------------------------------------------------ */
@@ -3619,7 +3636,7 @@ video {
 /* Tistory utility
 ------------------------------------------------ */
 .tistorytoolbar {
-  display: none !important;
+  display: none!important;
 }
 .entry-ccl {
   padding: 0 15px;
@@ -3632,6 +3649,9 @@ video {
 }
 .txc-table {
   width: 100%;
+}
+.tt-share-entry-with-sns .tt-sns-wrap {
+  padding: 0 15px!important;
 }
 .entry-content img {
   display: inline-block;
@@ -3877,6 +3897,9 @@ video {
 @media screen and (max-width: 767px) {
   .skeleton {
     border: none;
+  }
+  .footer {
+    text-align: left;
   }
 }
 /* Markdown Typography Default

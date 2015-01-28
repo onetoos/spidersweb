@@ -13,6 +13,10 @@
         }, 500);
       }
     });
+    
+    $(".entry-tags").html(function(index, html) {
+      return html.replace(/,/gi, '');
+    });
 
   });
 }).call(this);
