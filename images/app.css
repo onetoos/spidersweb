@@ -3638,7 +3638,7 @@ video {
   width: 100%;
 }
 .tt-share-entry-with-sns .tt-sns-wrap {
-  padding: 0 15px!important;
+  margin: 0 15px!important;
 }
 .entry-content img {
   display: inline-block;
@@ -3727,9 +3727,6 @@ video {
 }
 .tt-post-thumb {
   padding-bottom: 5px!important;
-}
-.item-120161 {
-  max-height: 148!important;
 }
 .tt-post-summary {
   font: inherit!important;
